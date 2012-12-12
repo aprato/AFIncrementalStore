@@ -778,7 +778,7 @@ inline NSString * AFResourceIdentifierFromReferenceObject(id referenceObject) {
         }
         
         NSMutableDictionary *objectIDsByResourceIdentifier = [_registeredObjectIDsByEntityNameAndNestedResourceIdentifier objectForKey:objectID.entity.name] ?: [NSMutableDictionary dictionary];
-        objectIDsByResourceIdentifier[AFResourceIdentifierFromReferenceObject(referenceObject)] = objectID;
+        [objectIDsByResourceIdentifier setObject:objectID forKey:AFResourceIdentifierFromReferenceObject(referenceObject)];
         
         [_registeredObjectIDsByEntityNameAndNestedResourceIdentifier setObject:objectIDsByResourceIdentifier forKey:objectID.entity.name];
     }
