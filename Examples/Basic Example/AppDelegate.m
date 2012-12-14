@@ -114,8 +114,11 @@
         abort();
     }
     
+<<<<<<< HEAD
     NSLog(@"SQLite URL: %@", storeURL);
     
+=======
+>>>>>>> Removing confusing log 
     return __persistentStoreCoordinator;
 }
 
